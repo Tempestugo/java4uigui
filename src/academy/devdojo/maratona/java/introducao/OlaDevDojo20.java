@@ -1,0 +1,24 @@
+package academy.devdojo.maratona.java.introducao;
+
+public class OlaDevDojo20 {
+    static void main(String[] args) {
+        int[] array = {1, 2, 3}; // já definindo os valores e quantidade de posições
+
+        int[][] arrayInt = new int[3][];
+        arrayInt[0] = new int[2];
+        arrayInt[1] = array;
+
+        arrayInt[2] = new int[]{1, 2, 3, 4, 5, 6};
+
+        int[][] arrayIn2 = {{0, 0}, {1, 2, 3,}, {1, 2, 3, 4, 5, 6,}};
+
+        for (int[] arrayBase : arrayInt) {
+            System.out.println("-----------");
+            for (int num : arrayBase) {
+
+                System.out.print(num + " ");
+            }
+        }
+    }
+
+}

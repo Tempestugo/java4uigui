@@ -1,0 +1,49 @@
+package academy.devdojo.maratona.java.javacore.introducaoclasses.Gassociado.dominio;
+
+public class Time {
+    private String nome;
+    private Jogador[] jogadores;
+
+
+    public Time(String nome) {
+        this.nome = nome;
+    }
+
+    public Time(String nome, Jogador[] jogadores) {
+        this.nome = nome;
+        this.jogadores = jogadores;
+    }
+
+    public void imprime(){
+        System.out.println("Nome: " + this.nome);
+        if (this.jogadores != null) {
+            for (Jogador jogador : this.jogadores) {
+                System.out.println("Jogador: " + jogador.getNome());
+            }
+        }else {
+
+            System.out.println("Jogadores nao encontrado.");
+            return;
+        }
+    }
+
+
+
+    public Jogador[] getJogadores() {
+        return jogadores;
+    }
+
+    public void setJogadores(Jogador[] jogadores) {
+        this.jogadores = jogadores;
+    }
+
+
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+}
