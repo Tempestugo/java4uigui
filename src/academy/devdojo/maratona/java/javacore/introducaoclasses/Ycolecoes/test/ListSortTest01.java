@@ -17,6 +17,13 @@ public class ListSortTest01 {
 
         for(String manga : mangas){
             System.out.println(manga);
+
         }
+        List<Double> dinheiros = new ArrayList<>();
+        dinheiros.add(1.0);
+        dinheiros.add(2.0);
+        System.out.println(dinheiros);
+        Collections.sort(dinheiros);
+        System.out.println(dinheiros);
     }
 }
