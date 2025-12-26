@@ -3,11 +3,13 @@ package academy.devdojo.maratona.java.javacore.introducaoclasses.Ycolecoes.test;
 import academy.devdojo.maratona.java.javacore.introducaoclasses.Ycolecoes.dominio.Consumidor;
 import academy.devdojo.maratona.java.javacore.introducaoclasses.Ycolecoes.dominio.Manga;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
-public class MapTest02 {
-    static void main(String[] args) {
+public class MapTest03 {
+    public static void main(String[] args) {
         Consumidor consumidor = new Consumidor("William Suane");
         Consumidor consumidor2 = new Consumidor("DevDojo Academy");
         System.out.println(consumidor);
@@ -18,17 +20,18 @@ public class MapTest02 {
         Manga pokemon = new Manga(9L, "Pokemon", 10);
         Manga dragonBallZ = new Manga(1L, "Dragon Ball Z", 10);
 
-    //    Map<Consumidor, Map<Manga, Double>> map = new HashMap<>();
+        List<Manga> mangaConsumidorList = List.of(attackOnTitan,berserk,hellsingUltimate,pokemon);
+        List<Manga>  mangaConsumidorList2 = List.of(dragonBallZ);
 
-        Map<Consumidor, Manga> consumidorManga = new HashMap<>();
-        consumidorManga.put(consumidor, attackOnTitan);
-        consumidorManga.put(consumidor2, berserk);
+        Map<Consumidor, List<Manga>> consumidorManga = new HashMap<>();
+        consumidorManga.put(consumidor, mangaConsumidorList);
+        consumidorManga.put(consumidor2, mangaConsumidorList2);
 
-        for (Map.Entry<Consumidor, Manga> consumidorMangaEntry : consumidorManga.entrySet()) {
-            System.out.println(consumidorMangaEntry.getKey().getNome() + " - " + consumidorMangaEntry.getValue().getNome());
-        }
-
-
+        for(Map.Entry<Consumidor, List<Manga>> entry : consumidorManga.entrySet()){
+            System.out.println("===========\n"+entry.getKey().getNome() );
+            for(Manga manga : entry.getValue()){
+                System.out.println(manga.getNome() );
+            }
         }
     }
-
+}
