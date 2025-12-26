@@ -28,6 +28,14 @@ public class Smartphone {
                 '}';
     }
 
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
     // Refleixo: x.equals(x) tem que ser true para tudo que for diferente de null
     //Simétrico: para x e y diferentes de null, se x.equals(y)==true logo, y.equals(x) ==true
     // Transitividade: para x,y,z diferentes de null, se x.equals(y) == true, e x.equals(z) == true logo, y.equals(z) == true
