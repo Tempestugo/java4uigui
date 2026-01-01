@@ -8,13 +8,13 @@ import java.util.*;
 public class ProdutoTest02 {
     static void main(String[] args) {
         List <Produto> produtos = new ArrayList();
-        produtos.add(new Produto("Macarrõa",20,12345L));
-        produtos.add(new Produto("Batata",210,12345L));
+        produtos.add(new Produto("Macarrõa",20,12345));
+        produtos.add(new Produto("Batata",210,12345));
 
         List <Produto> produtos2 = new ArrayList();
-        produtos2.add(new Produto("b",20,2L));
-        produtos2.add(new Produto("s",210,2L));
-        produtos2.add(new Produto("s",210,2L));
+        produtos2.add(new Produto("b", 20.0,2));
+        produtos2.add(new Produto("s",210,2));
+        produtos2.add(new Produto("s",210,2));
 
 
 
