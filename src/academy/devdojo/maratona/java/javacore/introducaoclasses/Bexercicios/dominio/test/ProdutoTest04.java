@@ -10,9 +10,9 @@ import java.util.function.Predicate;
 public class ProdutoTest04 {
     static void main(String[] args) {
         List<Produto> produtos2 = new ArrayList();
-        produtos2.add(new Produto("b", 20.0,2));
-        produtos2.add(new Produto("s",210,2));
-        produtos2.add(new Produto("s",210,2));
+        produtos2.add(new Produto("b", 20.0,2l));
+        produtos2.add(new Produto("s",210,2l));
+        produtos2.add(new Produto("s",210,2l));
 
         Set<Produto> produtoSet = new HashSet<Produto>();
         produtoSet.add(produtos2.get(0));

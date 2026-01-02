@@ -12,9 +12,9 @@ import java.util.function.Function;
 public class ProdutoFunction {
     static void main(String[] args) {
         List<Produto> produtos = new ArrayList<>();
-        produtos.add(new Produto("Notebook", 3500,1));
-        produtos.add(new Produto("Mouse", 80,2));
-        produtos.add(new Produto("Monitor", 1200,3));
+        produtos.add(new Produto("Notebook", 3500,1l));
+        produtos.add(new Produto("Mouse", 80,2l));
+        produtos.add(new Produto("Monitor", 1200,3l));
 
 
         GenericaFunction<Produto, String> repo = new GenericaFunction<>(produtos);

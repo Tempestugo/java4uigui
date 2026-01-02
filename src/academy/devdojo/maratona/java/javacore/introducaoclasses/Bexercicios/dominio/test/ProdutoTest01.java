@@ -11,8 +11,8 @@ public class ProdutoTest01 {
     static void main(String[] args) {
         HashSet<Produto> hashSet = new HashSet<>();
         List <Produto> produtos = new ArrayList();
-        produtos.add(new Produto("Macarrõa",20,12345));
-        produtos.add(new Produto("Batata",210,12345));
+        produtos.add(new Produto("Macarrõa",20,12345l));
+        produtos.add(new Produto("Batata",210,12345l));
         hashSet.add(produtos.get(0));
         hashSet.add(produtos.get(1));
 
@@ -23,7 +23,7 @@ public class ProdutoTest01 {
         System.out.println(produtos);
         System.out.println(hashSet);
 
-        System.out.println(produtos.contains(new Produto("batata", 20, 12345)));
+        System.out.println(produtos.contains(new Produto("batata", 20, 12345l)));
 
     }
 }
