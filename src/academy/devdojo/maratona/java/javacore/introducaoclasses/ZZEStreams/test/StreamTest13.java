@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 public class StreamTest13 {
@@ -24,18 +23,16 @@ public class StreamTest13 {
     ));
 
     static void main(String[] args) {
-        Map<PROMOTION, List<LightNovel>> collect = lightNovels.stream().collect(getLightNovelMapCollector());
+        Map<PROMOTION, List<LightNovel>> collect = lightNovels.stream().collect(Collectors.groupingBy(ln ->
+
+                ln.getPrice() < 6 ? PROMOTION.UNDER_PROMOTION : PROMOTION.UNDER_PROMOTION));
         System.out.println(collect);
         //Map<Category>, Map<Promotion>, List<LightNovel>>>
 
-        Map<Category, Map<PROMOTION, List<LightNovel>>> collect1 = lightNovels.stream().collect(Collectors.groupingBy(LightNovel::getCategory, getLightNovelMapCollector()));
+        Map<Category, Map<PROMOTION, List<LightNovel>>> collect1 = lightNovels.stream().collect(Collectors.groupingBy(LightNovel::getCategory, Collectors.groupingBy(ln ->
+
+                ln.getPrice() < 6 ? PROMOTION.UNDER_PROMOTION : PROMOTION.UNDER_PROMOTION)));
 
         System.out.println(collect1);
-    }
-
-    private static Collector<LightNovel, ?, Map<PROMOTION, List<LightNovel>>> getLightNovelMapCollector() {
-        return Collectors.groupingBy(ln ->
-
-                ln.getPrice() < 6 ? PROMOTION.UNDER_PROMOTION : PROMOTION.UNDER_PROMOTION);
     }
 }
