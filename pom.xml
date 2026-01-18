@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Configuração baseada no seu projeto e na aula [1] -->
+    <groupId>academy.devdojo</groupId> <!-- Geralmente é o nome do seu pacote base -->
+    <artifactId>java4uigui</artifactId>  <!-- O nome do seu projeto/repositório -->
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <!-- Define a versão do Java para compilação. -->
+        <!-- Se estiver usando Java 17 ou 21, mude o número abaixo -->
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <!-- Na próxima aula você adicionará as dependências aqui, como o MySQL [2] -->
+    <dependencies>
+        <!-- Espaço reservado para o driver do banco de dados -->
+    </dependencies>
+
+</project>
