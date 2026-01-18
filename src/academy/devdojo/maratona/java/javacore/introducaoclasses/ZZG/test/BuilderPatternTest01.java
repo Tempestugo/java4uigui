@@ -5,11 +5,11 @@ import academy.devdojo.maratona.java.javacore.introducaoclasses.ZZG.dominio.Pess
 public class BuilderPatternTest01 {
     static void main(String[] args) {
 //        new Pessoa("William","Suane","Viradonojiraya","williamjiraya");
-       new  Pessoa.PessoaBuilder()
-               .firstName("Viradonojiraya")
-               .lastName("Viradonojiraya")
-               .username("Viradonojiraya")
-               .email("Viradonojiraya");
+//       new  Pessoa.PessoaBuilder()
+//               .firstName("Viradonojiraya")
+//               .lastName("Viradonojiraya")
+//               .username("Viradonojiraya")
+//               .email("Viradonojiraya");
     }
 
 
